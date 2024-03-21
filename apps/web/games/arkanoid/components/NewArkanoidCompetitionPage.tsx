@@ -14,7 +14,8 @@ import { useMinaBalancesStore } from '@/lib/stores/minaBalances';
 import { useProtokitBalancesStore } from '@/lib/stores/protokitBalances';
 import AppChainClientContext from '@/lib/contexts/AppChainClientContext';
 import { arkanoidConfig } from '../config';
-import GamePage from '@/components/framework/GamePage';
+import DesktopNavbar from '@/components/ui/games-store/DesktopNavbar';
+import { Footer } from '@/components/Footer';
 
 interface IBrick {
   pos: [number, number];
@@ -167,11 +168,8 @@ export default function NewArkanoidCompetitionPage() {
   };
 
   return (
-    <GamePage
-      gameConfig={arkanoidConfig}
-      image={'/image/game-page/arkanoid-title.svg'}
-      defaultPage={'Competitions List'}
-    >
+    <>
+      <DesktopNavbar autoconnect={true} />
       <div className="flex flex-col items-center justify-center gap-5 py-10">
         <div className="py-3">Create competition</div>
         <div className="flex flex-col items-center">
@@ -285,6 +283,7 @@ export default function NewArkanoidCompetitionPage() {
           Create
         </div>
       </div>
-    </GamePage>
+      <Footer />
+    </>
   );
 }

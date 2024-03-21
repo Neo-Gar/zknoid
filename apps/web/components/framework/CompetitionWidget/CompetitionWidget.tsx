@@ -85,7 +85,7 @@ export const CompetitionWidget = ({
           className={
             'w-full rounded-[5px] border border-bg-dark bg-left-accent py-2 text-center text-headline-2 font-medium text-dark-buttons-text hover:border-left-accent hover:bg-bg-dark hover:text-left-accent max-[2000px]:max-w-[40%] min-[2000px]:max-w-[30%]'
           }
-          href={`/games/${gameId}/new-competition`}
+          href={`/games/new-competition`}
         >
           Create new competition
         </Link>

@@ -17,7 +17,9 @@ export const Competition = ({
           }
         >
           <span className={'uppercase text-left-accent'}>Name</span>
-          <span className={'font-normal'}>{competition.title}</span>
+          <span className={'col-start-2 col-end-4 font-normal'}>
+            {competition.title}
+          </span>
         </div>
         <div
           className={
@@ -25,7 +27,7 @@ export const Competition = ({
           }
         >
           <span className={'uppercase text-left-accent'}>Funds</span>
-          <span className={'font-normal'}>
+          <span className={'col-start-2 col-end-4 font-normal'}>
             {competition.reward} {competition.currency}
           </span>
         </div>

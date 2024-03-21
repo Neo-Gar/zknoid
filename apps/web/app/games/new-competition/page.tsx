@@ -9,6 +9,10 @@ const NewCompetitionPage = dynamic(
   }
 );
 
-export default function Home({ params }: { params: { gameId: string } }) {
-  return <NewCompetitionPage gameId={params.gameId} />;
+// export default function Home({ params }: { params: { gameId: string } }) {
+//   return <NewCompetitionPage gameId={params.gameId} />;
+// }
+
+export default function Home() {
+  return <NewCompetitionPage />;
 }

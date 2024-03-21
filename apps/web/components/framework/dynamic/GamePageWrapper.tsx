@@ -7,10 +7,10 @@ import AppChainClientContext from '@/lib/contexts/AppChainClientContext';
 
 export default function Page({
   gameId,
-  competitionId,
+  // competitionId,
 }: {
   gameId: string;
-  competitionId: string;
+  // competitionId?: string;
 }) {
   const config = useMemo(
     () => zkNoidConfig.games.find((game) => game.id == gameId)!,
@@ -21,9 +21,9 @@ export default function Page({
   return (
     <AppChainClientContext.Provider value={client}>
       <config.page
-        params={{
-          competitionId: competitionId,
-        }}
+        // params={{
+        //   competitionId: competitionId,
+        // }}
       />
     </AppChainClientContext.Provider>
   );
