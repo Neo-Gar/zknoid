@@ -37,9 +37,7 @@ export default function Home() {
             genre: x.genre,
             features: x.features,
             tags: [],
-            defaultPage: x.pageCompetitionsList
-              ? 'competitions-list'
-              : 'global',
+            defaultPage: '',
             active: true,
             isReleased: x.isReleased,
             releaseDate: x.releaseDate,

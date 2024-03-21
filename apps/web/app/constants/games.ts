@@ -44,7 +44,7 @@ export const defaultGames: IGame[] = [
       'Old but gold game. Beat all the bricks and protect the ball from falling',
     genre: ZkNoidGameGenre.Arcade,
     features: [ZkNoidGameFeature.SinglePlayer],
-    defaultPage: 'competitions-list',
+    defaultPage: '',
     active: true,
     isReleased: true,
     releaseDate: new Date(2023, 11, 1),

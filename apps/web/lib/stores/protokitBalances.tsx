@@ -1,8 +1,9 @@
 import 'reflect-metadata';
 
 import { ClientAppChain } from '@proto-kit/sdk';
+
 import { PendingTransaction, UnsignedTransaction } from '@proto-kit/sequencer';
-import { AccountUpdate, Mina, PublicKey, UInt64 } from 'o1js';
+import { AccountUpdate, Mina, PublicKey } from 'o1js';
 import { useCallback, useContext, useEffect } from 'react';
 import { create } from 'zustand';
 
@@ -16,6 +17,7 @@ import AppChainClientContext from '../contexts/AppChainClientContext';
 
 import { DefaultRuntimeModules } from '../runtimeModules';
 import { zkNoidConfig } from '@/games/config';
+import { ProtoUInt64 } from 'zknoid-chain-dev';
 
 export interface BalancesState {
   loading: boolean;
@@ -155,7 +157,7 @@ export const useTestBalanceGetter = () => {
     const sender = PublicKey.fromBase58(network.address!);
 
     const l2tx = await contextAppChainClient.transaction(sender, () => {
-      balances.addBalance(sender, UInt64.from(defaultBalance));
+      balances.addBalance(sender, ProtoUInt64.from(defaultBalance));
     });
 
     await l2tx.sign();
